@@ -1,0 +1,124 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+ProcessException: ProcessException: The system cannot find the file specified.
+
+  Command: .\Google\Chrome\Application\chrome.exe http://127.0.0.1:9101?uri=http%3A%2F%2F127.0.0.1%3A51477%2FjdCPBJie0sc%3D%2F
+
+```
+#0      _ProcessImpl._start (dart:io-patch/process_patch.dart:402:33)
+#1      Process.start (dart:io-patch/process_patch.dart:38:20)
+#2      Chrome._startProcess (package:browser_launcher/src/chrome.dart:156:26)
+#3      Chrome.start (package:browser_launcher/src/chrome.dart:148:18)
+#4      FlutterResidentDevtoolsHandler._launchDevToolsForDevices (package:flutter_tools/src/resident_devtools_handler.dart:188:24)
+#5      FlutterResidentDevtoolsHandler.launchDevToolsInBrowser (package:flutter_tools/src/resident_devtools_handler.dart:176:7)
+#6      TerminalHandler._commonTerminalInputHandler (package:flutter_tools/src/resident_runner.dart:1818:56)
+#7      TerminalHandler.processTerminalInput (package:flutter_tools/src/resident_runner.dart:1836:13)
+#8      _rootRunUnary (dart:async/zone.dart:1407:47)
+#9      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#10     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#11     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#12     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#13     _SyncBroadcastStreamController._sendData (dart:async/broadcast_stream_controller.dart:377:25)
+#14     _BroadcastStreamController.add (dart:async/broadcast_stream_controller.dart:244:5)
+#15     _AsBroadcastStreamController.add (dart:async/broadcast_stream_controller.dart:474:11)
+#16     _rootRunUnary (dart:async/zone.dart:1407:47)
+#17     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#18     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#19     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#20     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#21     _SinkTransformerStreamSubscription._add (dart:async/stream_transformers.dart:63:11)
+#22     _EventSinkWrapper.add (dart:async/stream_transformers.dart:13:11)
+#23     _StringAdapterSink.add (dart:convert/string_conversion.dart:228:11)
+#24     _StringAdapterSink.addSlice (dart:convert/string_conversion.dart:233:7)
+#25     _Utf8ConversionSink.addSlice (dart:convert/string_conversion.dart:307:20)
+#26     _ErrorHandlingAsciiDecoderSink.addSlice (dart:convert/ascii.dart:279:17)
+#27     _ErrorHandlingAsciiDecoderSink.add (dart:convert/ascii.dart:265:5)
+#28     _ConverterStreamEventSink.add (dart:convert/chunked_conversion.dart:69:18)
+#29     _SinkTransformerStreamSubscription._handleData (dart:async/stream_transformers.dart:111:24)
+#30     _rootRunUnary (dart:async/zone.dart:1407:47)
+#31     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#32     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#33     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#34     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#35     _SyncStreamControllerDispatch._sendData (dart:async/stream_controller.dart:784:19)
+#36     _StreamController._add (dart:async/stream_controller.dart:658:7)
+#37     _StreamController.add (dart:async/stream_controller.dart:606:5)
+#38     _Socket._onData (dart:io-patch/socket_patch.dart:2455:41)
+#39     _rootRunUnary (dart:async/zone.dart:1415:13)
+#40     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#41     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#42     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#43     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:297:7)
+#44     _SyncStreamControllerDispatch._sendData (dart:async/stream_controller.dart:784:19)
+#45     _StreamController._add (dart:async/stream_controller.dart:658:7)
+#46     _StreamController.add (dart:async/stream_controller.dart:606:5)
+#47     new _RawSocket.<anonymous closure> (dart:io-patch/socket_patch.dart:1942:33)
+#48     _NativeSocket.issueReadEvent.issue (dart:io-patch/socket_patch.dart:1385:14)
+#49     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#50     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#51     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#52     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:185:5)
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, 3.24.3, on Microsoft Windows [Version 10.0.26100.3476], locale en-US)
+    [32m•[39m Flutter version 3.24.3 on channel stable at D:\flutter_windows_3.24.3-stable\flutter
+    [32m•[39m Upstream repository https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision 2663184aa7 (7 months ago), 2024-09-11 16:27:48 -0500
+    [32m•[39m Engine revision 36335019a8
+    [32m•[39m Dart version 3.5.3
+    [32m•[39m DevTools version 2.37.3
+
+[32m[✓][39m Windows Version (Installed version of Windows is version 10 or higher)
+
+[32m[✓][39m Android toolchain - develop for Android devices (Android SDK version 35.0.0)
+    [32m•[39m Android SDK at C:\Users\rajuk\AppData\Local\Android\sdk
+    [32m•[39m Platform android-35, build-tools 35.0.0
+    [32m•[39m Java binary at: C:\Program Files\Java\jdk-17\bin\java
+    [32m•[39m Java version Java(TM) SE Runtime Environment (build 17.0.12+8-LTS-286)
+    [32m•[39m All Android licenses accepted.
+
+[31m[✗][39m Chrome - develop for the web (Cannot find Chrome executable at .\Google\Chrome\Application\chrome.exe)
+    [33m![39m Cannot find Chrome. Try setting CHROME_EXECUTABLE to a Chrome executable.
+
+[33m[!][39m Visual Studio - develop Windows apps (Visual Studio Build Tools 2022 17.13.3)
+    [32m•[39m Visual Studio at C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools
+    [32m•[39m Visual Studio Build Tools 2022 version 17.13.35828.75
+    [31m✗[39m Visual Studio is missing necessary components. Please re-run the Visual Studio installer for the "Desktop development
+      with C++" workload, and include these components:
+        MSVC v142 - VS 2019 C++ x64/x86 build tools
+         - If there are multiple build tool versions available, install the latest
+        C++ CMake tools for Windows
+        Windows 10 SDK
+
+[32m[✓][39m Android Studio (version 2024.3)
+    [32m•[39m Android Studio at C:\Program Files\Android\Android Studio
+    [32m•[39m Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    [32m•[39m Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    [32m•[39m Java version OpenJDK Runtime Environment (build 21.0.5+-13047016-b750.29)
+
+[32m[✓][39m VS Code (version 1.98.2)
+    [32m•[39m VS Code at C:\Users\rajuk\AppData\Local\Programs\Microsoft VS Code
+    [32m•[39m Flutter extension version 3.108.0
+
+[32m[✓][39m Connected device (3 available)
+    [32m•[39m sdk gphone64 x86 64 (mobile) • emulator-5554 • android-x64    • Android 15 (API 35) (emulator)
+    [32m•[39m Windows (desktop)            • windows       • windows-x64    • Microsoft Windows [Version 10.0.26100.3476]
+    [32m•[39m Edge (web)                   • edge          • web-javascript • Microsoft Edge 134.0.3124.72
+
+[32m[✓][39m Network resources
+    [32m•[39m All expected network resources are available.
+
+[33m![39m Doctor found issues in 2 categories.
+```
