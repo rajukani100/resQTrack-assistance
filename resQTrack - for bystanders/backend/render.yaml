@@ -1,0 +1,9 @@
+services:
+  - name: backend
+    type: web
+    runtime: node
+    buildCommand: "npm install"
+    startCommand: "npm start"  # Ensure this is correct
+    envVars:
+      - key: PORT
+        value: "10000"
