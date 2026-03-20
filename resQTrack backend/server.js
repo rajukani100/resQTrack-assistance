@@ -16,13 +16,13 @@ const fs = require("fs");
 const app = express();
 const axios = require("axios");
 const { Telegraf, Markup } = require("telegraf");
-const bot = new Telegraf("8173766942:AAGMSVXE4efJYAMfQ-D7qglzu5HlrGtFFRQ");
+const bot = new Telegraf("");
 const cloudinary = require("cloudinary").v2;
 
 cloudinary.config({
-  cloud_name: "dizxwrdv8",
-  api_key: "852149552623953",
-  api_secret: "oJH3ZiqflQ2_f26NQ1wy1dhzTWU",
+  cloud_name: "",
+  api_key: "",
+  api_secret: "",
 });
 const multer = require("multer");
 const Imagecard = require("./models/Imagecard.js");
@@ -95,11 +95,11 @@ bot.command("accept", async (ctx) => {
   }
 });
 
-// bot.launch();
+bot.launch();
 console.log("🤖 ResQTrack Bot is running...");
 
-// process.once("SIGINT", () => bot.stop("SIGINT"));
-// process.once("SIGTERM", () => bot.stop("SIGTERM"));
+process.once("SIGINT", () => bot.stop("SIGINT"));
+process.once("SIGTERM", () => bot.stop("SIGTERM"));
 
 app.use(cors());
 app.use(express.json());
